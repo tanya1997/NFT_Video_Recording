@@ -1,0 +1,30 @@
+.main_div {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+   
+} 
+
+.timer-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .timer {
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_css {
+    text-align: center; 
+  }
+
+  .value {
+    font-size: xx-large;
+  }
+
+  .text {
+    font-size: large;
+  }
