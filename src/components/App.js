@@ -24,10 +24,10 @@ import ComponentCanvas from './Canvas';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#2C394B",
+      main: "#515E63",
     },
     secondary:{
-      main: "#FF4C29"
+      main: "#C9D8B6"
     }
   }
 });

@@ -9,7 +9,7 @@ body {
   padding: 0px;
   color: #fff;
   height: 100%;
-  background-color: #082032;
+  background-color: #515E63;
   font-family: "Baloo Da 2", cursive;
 }
 .App-logo {
@@ -24,7 +24,7 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #A35709;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -71,6 +71,7 @@ body {
   padding: 100px 40px;
   top: 45%;
   left: 50%;
+  color: "#515E63";
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }

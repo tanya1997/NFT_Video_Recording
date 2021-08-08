@@ -30,10 +30,8 @@ class MainPage extends Component {
     }
   
     async loadBlockchainData() {
-      const web3 = window.web3
+      const web3 = new Web3('ws://127.0.0.1:7545')
       // Load account
-      const accounts = await web3.eth.getAccounts()
-      this.setState({ account: accounts[0] })
   
       const networkId = await web3.eth.net.getId()
       const networkData = Video.networks[networkId]
@@ -61,7 +59,15 @@ class MainPage extends Component {
     async donate(donationAddress, donateValue) {
       //var donationAddress = this.state.account;
     //  alert("test!");
-
+      //await this.loadBlockchainData()
+      const web3 = window.web3
+      if (web3 === undefined){
+        window.alert('Wallet not found.')
+        return;
+      }
+      // Load account
+      const accounts = await web3.eth.getAccounts()
+      this.setState({ account: accounts[0] })
       window.web3.eth.sendTransaction({
         to: donationAddress,
         from: this.state.account,
@@ -102,7 +108,7 @@ class MainPage extends Component {
     render() {
       return (
         <div>
-           <Box p={3} color="secondary" className="header_main_css" style={{backgroundColor: "#2C394B"}}>
+           <Box p={3} color="secondary" className="header_main_css" style={{backgroundColor: "#57837B"}}>
            
               <Button variant="contained"  href="/">HOME</Button>
               <Typography variant="subtitle1" className="header_left">{this.state.account}</Typography>
@@ -111,8 +117,8 @@ class MainPage extends Component {
             <div className="main_div">
               { this.state.video_list.map((video_data, key) => {
                 return(
-                  <Card className="second_div cardview" style={{backgroundColor: "#2C394B"}}>
-                    <video width="300" height="200" src={'https://ipfs.infura.io/ipfs/'+video_data.videoHash} key={key} controls loop/>
+                  <Card className="second_div cardview" style={{backgroundColor: "#57837B"}}>
+                    <video width="300" height="200" style={{backgroundColor: "#515E63"}} src={'https://ipfs.infura.io/ipfs/'+video_data.videoHash} key={key} controls loop/>
                     <h4 style={{color: "white", margin: 10, padding: 0}}>{video_data.owner}</h4>
                     <div className="second_div">
                     <CurrencyInput

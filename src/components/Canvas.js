@@ -29,9 +29,9 @@ export default function ComponentCanvas () {
 
     var rectSize = 150;
 
-    ctx.fillStyle = 'yellow';
+    ctx.fillStyle = '#F1ECC3';
     ctx.fillRect(dx, dy, rectSize, rectSize);
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = '#57837B';
    /* setTimeout(() => {
       ctx.fillStyle = 'blue';
       ctx.fillRect(200, 50, 50, 50);
@@ -60,9 +60,9 @@ export default function ComponentCanvas () {
         }
       }
         
-      ctx.fillStyle = 'yellow';
+      ctx.fillStyle = '#F1ECC3';
       ctx.fillRect(dx, dy, rectSize, rectSize);
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = '#57837B';
     });
     
     var intervalRectMove = window.setInterval(myCallback, 300);
@@ -104,7 +104,8 @@ export default function ComponentCanvas () {
            ){
              window.clearInterval(intervalRectAdd);
             window.clearInterval(intervalRectMove);
-            recorder.stop();
+            if (recorder.state != 'inactive')
+              recorder.stop();
             
            }else{
               ctx.fillRect(val[0], val[1], rectSize, rectSize);

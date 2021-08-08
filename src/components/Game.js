@@ -16,11 +16,11 @@ const renderTime = ({ remainingTime }) => {
       return <div className="value">Start!</div>;
     }
 
-    var textSupport = "You are red";
+    var textSupport = "You are light";
     var textSupport2 = "rectangle";
 
     if (remainingTime < 6 && remainingTime > 3){
-      textSupport = "Avoid other";
+      textSupport = "Avoid green";
       textSupport2 = "rectangles"
     }
 
@@ -99,6 +99,10 @@ const renderTime = ({ remainingTime }) => {
 
     const shareVideo = async () =>  {
       const web3 = window.web3
+      if (web3 === undefined){
+        window.alert('Wallet not found.')
+        return;
+      }
       // Load account
       const accounts = await web3.eth.getAccounts()
      // this.setState({ account: accounts[0] })
@@ -152,7 +156,7 @@ const renderTime = ({ remainingTime }) => {
 
     return (
       <div className="main_div">
-        <Box p={3} color="secondary" className="header_css" style={{backgroundColor: "#2C394B"}}>
+        <Box p={3} color="secondary" className="header_css" style={{backgroundColor: "#57837B"}}>
           <Button variant="contained" href="/">HOME</Button>
         <ButtonGroup color="primary"
       aria-label="outlined secondary button group">

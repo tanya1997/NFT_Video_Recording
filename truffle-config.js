@@ -17,9 +17,12 @@ module.exports = {
       	  mnemonic: {
 	    phrase: mnemonicPhrase
 	  },
-	  providerOrUrl: "https://http-testnet.hecochain.com"
+	  providerOrUrl: "https://rpc-mumbai.maticvigil.com"
       }),
-      network_id: 256
+      network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
     }
   },
   contracts_directory: './src/contracts/',

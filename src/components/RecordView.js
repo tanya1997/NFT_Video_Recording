@@ -49,6 +49,10 @@ function RecordView() {
 
     const shareVideo = async () =>  {
       const web3 = window.web3
+      if (web3 === undefined){
+        window.alert('Wallet not found.')
+        return;
+      }
       // Load account
       const accounts = await web3.eth.getAccounts()
      // this.setState({ account: accounts[0] })
@@ -104,7 +108,7 @@ function RecordView() {
  // <p>{status}</p>
     return (
       <div className="main_div">
-        <Box p={3} color="secondary" className="header_css" style={{backgroundColor: "#2C394B"}}>
+        <Box p={3} color="secondary" className="header_css" style={{backgroundColor: "#57837B"}}>
         <ButtonGroup color="primary"
       aria-label="outlined secondary button group">
           <Button  variant="contained" onClick={startRecording}>Start Recording</Button>
