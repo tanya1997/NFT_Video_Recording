@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Box from '@material-ui/core/Box';
 import Game from './Game';
+import UploadVideo  from './Upload';
+
 import { createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import {
   BrowserRouter as Router,
@@ -60,6 +62,7 @@ function ModalSwitch() {
         <Route path="/main_page" children={<MainPage />} />
         <Route path="/canvas_game" children={<ComponentCanvas />} />
         <Route path="/game" render={(props) => <Game {...props}/>}/>
+        <Route path="/upload_video" children={<UploadVideo />} />
       </Switch>
     </div>
   );
@@ -70,7 +73,7 @@ function Home() {
     <div>
       <BackgroundGraph/>
       <Card className="middle">
-      <h2>NFT Game Recording</h2>
+      <h2>NFT Video Recording</h2>
       <p></p>
       <ButtonGroup color="secondary"
       orientation="vertical"
@@ -80,6 +83,9 @@ function Home() {
           <Box m={2} />
       <Button variant="contained" color="primary"
           href="/main_page">Video gallery</Button>
+          <Box m={2} />
+      <Button variant="contained" color="primary"
+          href="/upload_video">Upload video</Button>
           <Box m={2} />
       <Button variant="contained" color="primary"
           href="/record_view">Screen record</Button>

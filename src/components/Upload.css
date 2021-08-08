@@ -1,0 +1,45 @@
+#drop-area {
+    position: relative;
+  }
+  
+  #fileElem {
+    display: none;
+  }
+  
+  .upload-label {
+    font-family: "Montserrat";
+    font-size: xx-large;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1ECC3
+  }
+  .upload-label:hover {
+    background-color: #C9D8B6;;
+  }
+  
+  .upload-label:active {
+    background-color: #C9D8B6;
+  }
+  
+  .upload-text {
+    color: #666;
+    user-select: none;
+  }
+  
+  .image {
+    min-width: 100%;
+    max-width: 100%;
+    height: 140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  

@@ -12,7 +12,9 @@ install npm packages
 run truffle
 	https://www.trufflesuite.com/
 	truffle migrate --network developer
- 
+settings web3 path
+   open src/components/MainPage.js
+   change string const server = 'ws://127.0.0.1:7545' 
 run npm
 	npm start
  
@@ -30,6 +32,8 @@ install npm packages
 	npm i	
 run truffle
  	truffle migrate --network testnet
-
+settings web3 path
+   open src/components/MainPage.js
+   change string const server = 'ws://127.0.0.1:7545' (for example const server = 'https://rpc-mumbai.maticvigil.com')
 run npm
  	npm start

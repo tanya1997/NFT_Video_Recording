@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import './MainPage.css';
 import CurrencyInput from 'react-currency-input-field';
 
+const server = 'https://rpc-mumbai.maticvigil.com'
 class MainPage extends Component {
 
     async componentWillMount() {
@@ -30,7 +31,7 @@ class MainPage extends Component {
     }
   
     async loadBlockchainData() {
-      const web3 = new Web3('ws://127.0.0.1:7545')
+      const web3 = new Web3(server)
       // Load account
   
       const networkId = await web3.eth.net.getId()
@@ -128,7 +129,7 @@ class MainPage extends Component {
                         placeholder="Please enter a value"
                         defaultValue={video_data.donateValue}
                         decimalsLimit={10}
-                        prefix="HT "
+                        prefix="MATIC "
                         onValueChange={(value, name) => this.handleLike(key, value)}
                       />;
                         <Button  variant="contained" onClick={this.donate.bind(this, video_data.owner, video_data.donateValue)}>Donate</Button>
